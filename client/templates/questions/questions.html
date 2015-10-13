@@ -1,0 +1,20 @@
+<template name="questions">
+	<div class="large-12 columns">
+		<ul class="accordion" data-accordion>
+		{{#each questions}}
+		  <li class="accordion-navigation">
+		    <a href="#panel-{{i}}">{{question}}</a>
+		    <div id="panel-{{i}}" class="content">
+		      {{answer}}
+		    </div>
+		  </li>	
+	  	{{/each}}
+		</ul>
+	</div>
+
+	<script>
+		$(function () {
+			$(document).foundation();
+		})
+	</script>
+</template>
